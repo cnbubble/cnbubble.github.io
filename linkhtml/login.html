@@ -1,41 +1,41 @@
 <html>
 <head>
-<title>±íµ¥×¢²áºÍÑéÖ¤</title>
+<title>è¡¨å•æ³¨å†Œå’ŒéªŒè¯</title>
 <script language="JavaScript">
 function check()
 {  
  fr = document.form1;
- if(fr.uid.value=="")//ÓÃ»§Ãû²»ÄÜÎª¿Õ
+ if(fr.uid.value=="")//ç”¨æˆ·åä¸èƒ½ä¸ºç©º
  {
-alert("ÓÃ»§ID±ØĞëÒªÌîĞ´£¡");
+alert("ç”¨æˆ·IDå¿…é¡»è¦å¡«å†™ï¼");
 fr.uid.focus();
  return false;
  }
- if((fr.psw1.value != "") || (fr.psw2.value != ""))//Á½´ÎÃÜÂëÊäÈë±ØĞëÒ»ÖÂ
+ if((fr.psw1.value != "") || (fr.psw2.value != ""))//ä¸¤æ¬¡å¯†ç è¾“å…¥å¿…é¡»ä¸€è‡´
  {
 if(fr.psw1.value!=fr.psw2.value)
  {
- alert("ÃÜÂë²»Ò»ÖÂ,ÇëÖØĞÂÊäÈë²¢ÑéÖ¤ÃÜÂë£¡");
+ alert("å¯†ç ä¸ä¸€è‡´,è¯·é‡æ–°è¾“å…¥å¹¶éªŒè¯å¯†ç ï¼");
 fr.psw1.focus();
  return false;
  }
  }
- else {//ÃÜÂëÒ²²»ÄÜÎª¿Õ
-alert("ÃÜÂë²»ÄÜÎª¿Õ£¡");
+ else {//å¯†ç ä¹Ÿä¸èƒ½ä¸ºç©º
+alert("å¯†ç ä¸èƒ½ä¸ºç©ºï¼");
 fr.psw1.focus();
  return false;
  }
  
-if(fr.gender.value == "")//ĞÔ±ğ±ØĞëÌîĞ´
+if(fr.gender.value == "")//æ€§åˆ«å¿…é¡»å¡«å†™
  {
-alert("ĞÔ±ğ±ØĞëÒªÌîĞ´£¡");
+alert("æ€§åˆ«å¿…é¡»è¦å¡«å†™ï¼");
 fr.name.focus();
  return false;
  }
- if(fr.email.value != "")//ÑéÖ¤emailµÄ¸ñÊ½
+ if(fr.email.value != "")//éªŒè¯emailçš„æ ¼å¼
  {
 if(!isEmail(fr.email.value)) {
- alert("ÇëÊäÈëÕıÈ·µÄÓÊ¼şÃû³Æ£¡");
+ alert("è¯·è¾“å…¥æ­£ç¡®çš„é‚®ä»¶åç§°ï¼");
 fr.email.focus();
  return false;
  }
@@ -61,64 +61,62 @@ function isEmail(theStr){
 <body >
 <form name="form1" id="form1" method="post" action="reg2.jsp">
 <table  border=1 align=center width=350>
-<TR align=middle><Th colSpan=2 height=24>ĞÂÓÃ»§×¢²á</TH></TR>
+<TR align=middle><Th colSpan=2 height=24>æ–°ç”¨æˆ·æ³¨å†Œ</TH></TR>
 <TR>
 <TD width="40%" >
-<B>ÓÃ&nbsp»§&nbsp;Ãû</B>£º</TD>
+<B>ç”¨&nbspæˆ·&nbsp;å</B>ï¼š</TD>
 <TD width="60%" ><INPUT maxLength="10" size=30  name="uid" type="text"></TD>
 </TR>
 <TR>
-<TD ><B>ĞÔ&nbsp;&nbsp;&nbsp;&nbsp;±ğ</B>£º</TD>
+<TD ><B>æ€§&nbsp;&nbsp;&nbsp;&nbsp;åˆ«</B>ï¼š</TD>
 <TD><INPUT type=radio CHECKED value="boy" name="gender">
-ÄĞº¢ 
+ç”·å­© 
 <INPUT type=radio value="girl"  name="gender">
 
-Å®º¢</TD>
+å¥³å­©</TD>
 </TR>
 <tr>
-<TD ><B>ÃÜ&nbsp;&nbsp;&nbsp;&nbsp;Âë</B>£º
+<TD ><B>å¯†&nbsp;&nbsp;&nbsp;&nbsp;ç </B>ï¼š
 </TD>
 <td><input name="psw1"  type="password" size=32></td>
 <tr>
-<TD><B>È·ÈÏÃÜÂë</B>£º</TD>
+<TD><B>ç¡®è®¤å¯†ç </B>ï¼š</TD>
 <td ><input name="psw2" type="password" size=32></td>
 <TR>
-<TD ><B>ÃÜÂëÎÊÌâ</B>£º</TD>
+<TD ><B>å¯†ç é—®é¢˜</B>ï¼š</TD>
 <TD>
 <INPUT type=text size=30 name="question" type="text">
 </TD></TR>
 <TR>
-<TD ><B>ÎÊÌâ´ğ°¸</B>£º</TD>
+<TD ><B>é—®é¢˜ç­”æ¡ˆ</B>ï¼š</TD>
 <TD>
 <INPUT type=text size=30 name="answer" type="text">
 </TD></TR>
 <TR>
-<TD ><B>Email</B>£º</TD>
+<TD ><B>Email</B>ï¼š</TD>
 <TD >
 <INPUT maxLength=50 size=30 name="email" type="text"></TD>
 </TR>
 <tr>
-<TD ><B>ÁªÏµµç»°</B>£º</TD>
+<TD ><B>è”ç³»ç”µè¯</B>ï¼š</TD>
 <TD>
 <INPUT maxLength=50 size=30 name="tel" type="text"></TD></tr>
       <tr>
-        <td><b>Ö°&nbsp;&nbsp;&nbsp;&nbsp;Òµ</b>:</td>
+        <td><b>èŒ&nbsp;&nbsp;&nbsp;&nbsp;ä¸š</b>:</td>
         <td><select name="career" class="input1" />
-        <option value="student" selected="selected">Ñ§Éú</option>  
- <option value="worker" >¹¤ÈË</option>
- <option value="teacher" >ÀÏÊ¦</option>
- <option value="famer" >Å©Ãñ</option>
- <option value="business" >ÉÌÈË</option>
+        <option value="student" selected="selected">å­¦ç”Ÿ</option>  
+ <option value="worker" >å·¥äºº</option>
+ <option value="teacher" >è€å¸ˆ</option>
+ <option value="famer" >å†œæ°‘</option>
+ <option value="business" >å•†äºº</option>
       </td>
       </tr><tr>
-<td></td><td><input type=submit value="×¢ ²á" name=Submit onClick="return check()">      
-<input type=reset value="Çå ³ı" name=Submit2>
+<td></td><td><input type=submit value="æ³¨ å†Œ" name=Submit onClick="return check()">      
+<input type=reset value="æ¸… é™¤" name=Submit2>
 
 </td>
 </tr>
 </table>
 </form>
 </body>
-
-
 </html>
